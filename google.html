@@ -5,7 +5,7 @@
     <link href="google.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Simple markers</title>
+    <title>Googel maps shebabs</title>
 
 
 </head>
@@ -32,16 +32,61 @@
 
             };
 
+
+            var myLatLng3 = {
+
+                lat: 53.737819,
+                lng: 9.987283
+
+
+            };
+
+
+            var myLatLng4 = {
+
+
+                lat: 52.020363,
+                lng: -0.161421
+
+
+
+
+            };
+
+
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
                 center: myLatLng
             });
 
-            var marker = new google.maps.Marker({
+            var marker1 = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Berlin'
+            });
+
+
+            var marker2 = new google.maps.Marker({
                 position: myLatLng2,
                 map: map,
                 title: 'Enghave Parken'
             });
+
+            var marker2 = new google.maps.Marker({
+                position: myLatLng3,
+                map: map,
+                title: 'Hamburg'
+            });
+
+
+            var marker2 = new google.maps.Marker({
+                position: myLatLng4,
+                map: map,
+                title: 'London'
+            });
+
+
+
         }
     </script>
 
