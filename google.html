@@ -2,11 +2,10 @@
 <html>
 
 <head>
+    <title>google maps shebabs</title>
     <link href="google.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Googel maps shebabs</title>
-
 
 </head>
 
@@ -14,106 +13,56 @@
     <div id="map"></div>
     <script>
         function initMap() {
-            var myLatLng = {
-
-
-                lat: 52.528434,
-                lng: 13.387693
-
-
-            };
-
-            var myLatLng2 = {
-
-
+            var enghave = {
                 lat: 55.667889,
                 lng: 12.542881
-
-
             };
-
-
-            var myLatLng3 = {
-
-                lat: 53.737819,
-                lng: 9.987283
-
-
-            };
-
-
-            var myLatLng4 = {
-
-
-                lat: 52.020363,
-                lng: -0.161421
-
-
-
-
-            };
-
-
-
-
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
-                center: myLatLng
+                center: enghave
+
             });
 
-            var marker1 = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Berlin',
-                animation: google.maps.Animation.DROP,
-                icon: "gano-01.png"
+            var contentString = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">sker der</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>hahahaha</b>, also referred to as <b>Rolex</b>, is a large ' +
+                'sandstone rock formation in the southern part of the ' +
+                'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+                'south west of the nearest large town, Alice Springs; 450&#160;km ' +
+                '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major ' +
+                'features of the Uluru -  Park. Uluru is ' +
+                'sacred to the Pitjantjatjara and Yankunytjatjara, the ' +
+                'Aboriginal people of the area. It has many springs, waterholes, ' +
+                'rock caves and ancient paintings. Uluru is listed as a World ' +
+                'Heritage Site.</p>' +
+                '<p>Rolex sangen, <a href="http://listenonrepeat.com/watch/?v=rCx4NFNuYgI#Ayo_%26_Teo_-_Rolex_%7C_Prod__BL%24%24D_%7C_%23rolexchallenge"</a> ' +
+
+
+
+
+                '.</p>' +
+                '</div>' +
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
             });
 
-
-            var marker2 = new google.maps.Marker({
-                position: myLatLng2,
+            var marker = new google.maps.Marker({
+                position: enghave,
                 map: map,
                 title: 'Enghave Parken',
-                animation: google.maps.Animation.DROP
-            });
-
-            var marker3 = new google.maps.Marker({
-                position: myLatLng3,
-                map: map,
-                title: 'Hamburg',
-                animation: google.maps.Animation.DROP,
-                icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-            });
-
-
-            var marker4 = new google.maps.Marker({
-                position: myLatLng4,
-                map: map,
-                title: 'London',
-                animation: google.maps.Animation.DROP,
                 icon: "gano-01.png"
-
-
             });
-
-
-
-
-
-
-
-
-
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            });
         }
     </script>
-
-
-
-
-
-
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsRgobDitNWaRAza15j5uFHY5v4LtAwBc&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsRgobDitNWaRAza15j5uFHY5v4LtAwBc	&callback=initMap">
     </script>
 </body>
 
